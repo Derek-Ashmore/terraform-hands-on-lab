@@ -36,4 +36,4 @@ cost something -- typically less than one dollar.  A credit card may be required
 
 > Clone or download/unzip this project
 
-![Lab Download Screenshot](lab-download-screenshot.jpg)
+![Lab Download Screenshot](https://raw.github.com/Derek-Ashmore/terraform-hands-on-lab/blob/master/lab-download-screenshot.jpg)
