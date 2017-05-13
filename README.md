@@ -36,6 +36,6 @@ cost something -- typically less than one dollar.  A credit card may be required
 
 > Clone or download/unzip this project
 
-![Lab Download Screenshot](lab-download-screenshot.jpg?raw=true)
+![Lab Download Screenshot](lab-download-screenshot.png?raw=true)
 
-<kdb><img class="centered" src="{% static 'lab-download-screenshot.jpg?raw=true'  %}" width="500" height="500" /></kdb>
+<kdb><img class="centered" src="{% static 'lab-download-screenshot.png?raw=true'  %}" width="500" height="500" /></kdb>
