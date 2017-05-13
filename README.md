@@ -38,4 +38,4 @@ cost something -- typically less than one dollar.  A credit card may be required
 
 ![Lab Download Screenshot](lab-download-screenshot.jpg?raw=true)
 
-<kdb><img class="centered" src="{% static 'lab-download-screenshot.jpg'  %}" width="500" height="500" /></kdb>
+<kdb><img class="centered" src="{% static 'lab-download-screenshot.jpg?raw=true'  %}" width="500" height="500" /></kdb>
