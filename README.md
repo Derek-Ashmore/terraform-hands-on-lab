@@ -36,6 +36,6 @@ cost something -- typically less than one dollar.  A credit card may be required
 
 > Clone or download/unzip this project
 
-![Lab Download Screenshot](https://raw.github.com/Derek-Ashmore/terraform-hands-on-lab/blob/master/lab-download-screenshot.jpg)
+![Lab Download Screenshot](lab-download-screenshot.jpg?raw=true)
 
 <kdb><img class="centered" src="{% static 'lab-download-screenshot.jpg'  %}" width="500" height="500" /></kdb>
