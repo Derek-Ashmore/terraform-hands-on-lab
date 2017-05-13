@@ -7,9 +7,12 @@ the following:
 * Docker
 * Text editor of your choice
 
+In the guided lab discussion, I will assume you've completed all setup steps and
+we'll move on to the [Lab Exercises](documentation/lab-exercises.md).
+
 ## Setting up for the Hands-On Lab
 
-### Download and Install Terraform
+### Step 1: Download and Install Terraform
 Terraform is a "Unzip and Go" install -- nothing more complicated than that. Any platform
 that can run Terraform will work for this lab.
 > 1. [Terraform download](https://www.terraform.io/downloads.html)
@@ -26,16 +29,14 @@ C:\>terraform -v
 Terraform v0.9.5
 ```
 
-### Sign-up for an AWS Account
+### Step 2: Sign-up for an AWS Account
 Every effort is made in this lab to use free-tier resources. That said, this lab will
 cost something -- typically less than one dollar.  A credit card may be required.
 > [AWS Web Services Console](https://aws.amazon.com/)
 
-### Download this Project
+### Step 3: Download this Project
 > This project is on my [Github](https://github.com/Derek-Ashmore/terraform-hands-on-lab)
 
 > Clone or download/unzip this project
 
 ![Lab Download Screenshot](lab-download-screenshot.png?raw=true)
-
-<kdb><img class="centered" src="{% static 'lab-download-screenshot.png?raw=true'  %}" width="500" height="500" /></kdb>
