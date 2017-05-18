@@ -2,8 +2,12 @@
 
 This module creates a VPC in a specified region with the following six subnets:
 
-* Public subnets (across three availability zones)
-* Private subnets (across three availability zones)
+* Public subnets (across multiple availability zones)
+* Private subnets (across multiple availability zones)
+
+## Inputs
+
+This module inputs are described by ```vpc-variables.tf```.
 
 ## Public Subnets
 

@@ -27,6 +27,6 @@ variable "cidr_block_public_subnet_segment_suffix_list" {
 
 variable "cidr_block_private_subnet_segment_suffix_list" {
   type    = "list"
-	description = "CIDR block suffix (two nodes plus slash) for individual dmz subnets"
+	description = "CIDR block suffix (two nodes plus slash) for individual private subnets"
   default = [".20.0/24"]
 }
