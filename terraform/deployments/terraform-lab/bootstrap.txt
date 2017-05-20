@@ -1,6 +1,7 @@
 #!/bin/bash
-yum install httpd -y
+yum install -y httpd php
 yum update -y
 service httpd start
 chkconfig httpd on
-echo "<html><h1>Hi There!</h1><p>I'm on my way I'm making it.</p></html>" > /var/www/html/index.html
+echo "<html><head><meta http-equiv=\"Refresh\" content=\"0; url=index.php\"/></head></html>" > /var/www/html/index.html
+echo "<html><h1>Hi There"'!'"</h1><p>I'm on my way I'm making it.</p>Microservice Output<p></p><p><code><?php error_reporting(E_ALL); print_r(shell_exec('curl http://ip.jsontest.com/')); ?></code></p></html>" > /var/www/html/index.php
