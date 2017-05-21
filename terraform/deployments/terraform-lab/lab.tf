@@ -20,6 +20,15 @@ module "aws-vpc" {
   vpc_name = "TerraformLabVPC"
 }
 
+module "webServer-security-group" {
+  source  = "../../templates/security-groups/webServer"
+	aws_key = "${var.aws_key}"
+  aws_secret_key = "${var.aws_secret_key}"
+  aws_region = "${var.aws_region}"
+
+	vpc_id = "${module.aws-vpc.VpcId}"
+}
+
 module "aws-web-server" {
   source  = "../../templates/aws-web-server"
   aws_key = "${var.aws_key}"
@@ -30,6 +39,7 @@ module "aws-web-server" {
   subnet_id = "${module.aws-vpc.publicSubnetIds[0]}"
   instance_name = "Lab Web Server"
   userData = "${file("webServerBootstrap.txt")}"
+	webServerSecurityGroupId = "${module.webServer-security-group.webServerSecurityGroupId}"
 }
 
 module "microservice-security-group" {
@@ -39,7 +49,7 @@ module "microservice-security-group" {
   aws_region = "${var.aws_region}"
 
 	vpc_id = "${module.aws-vpc.VpcId}"
-	caller_security_group_id_list = ["${module.aws-web-server.webServerSecurityGroupId}"]
+	caller_security_group_id_list = ["${module.webServer-security-group.webServerSecurityGroupId}"]
 }
 
 module "aws-ec2-docker" {

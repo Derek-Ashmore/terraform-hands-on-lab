@@ -29,3 +29,6 @@ variable "userData" {
 	description = "UserData bootstrap script that is used when the instance is launched"
 	default = ""
 }
+variable "webServerSecurityGroupId" {
+  description = "Security group assigned to the web server instance when it's launched"
+}
