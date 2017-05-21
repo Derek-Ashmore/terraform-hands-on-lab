@@ -29,18 +29,33 @@ module "aws-web-server" {
   vpc_id = "${module.aws-vpc.VpcId}"
   subnet_id = "${module.aws-vpc.publicSubnetIds[0]}"
   instance_name = "Lab Web Server"
-  userData = "${file("bootstrap.txt")}"
+  userData = "${file("webServerBootstrap.txt")}"
 }
 
-/*output "VpcId" {
-    value = "${module.aws-vpc.VpcId}"
+module "microservice-security-group" {
+  source  = "../../templates/security-groups/microservice"
+	aws_key = "${var.aws_key}"
+  aws_secret_key = "${var.aws_secret_key}"
+  aws_region = "${var.aws_region}"
+
+	vpc_id = "${module.aws-vpc.VpcId}"
+	caller_security_group_id_list = ["${module.aws-web-server.webServerSecurityGroupId}"]
 }
-output "publicSubnetIds" {
-    value = "${module.aws-vpc.publicSubnetIds}"
-}*/
+
+module "aws-ec2-docker" {
+  source  = "../../templates/aws-ec2-docker"
+  aws_key = "${var.aws_key}"
+  aws_secret_key = "${var.aws_secret_key}"
+  aws_region = "${var.aws_region}"
+
+  vpc_id = "${module.aws-vpc.VpcId}"
+  subnet_id = "${module.aws-vpc.privateSubnetIds[0]}"
+  instance_name = "Lab Microservice"
+  userData = "${file("webServerBootstrap.txt")}"
+	privateIp = "10.0.20.254"
+	microserviceSecurityGroupId = "${module.microservice-security-group.microserviceSecurityGroupId}"
+}
+
 output "PublicIP" {
     value = "${module.aws-web-server.PublicIP}"
 }
-/*output "PublicDNS" {
-    value = "${module.aws-web-server.PublicDNS}"
-}*/

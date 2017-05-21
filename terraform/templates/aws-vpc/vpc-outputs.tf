@@ -8,3 +8,6 @@ output "VpcId" {
 output "publicSubnetIds" {
   value = ["${aws_subnet.public.*.id}"]
 }
+output "privateSubnetIds" {
+  value = ["${aws_subnet.private.*.id}"]
+}

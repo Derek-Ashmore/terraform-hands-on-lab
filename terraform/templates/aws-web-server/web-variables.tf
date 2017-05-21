@@ -26,6 +26,6 @@ variable "assignPublicIp" {
 	default = "True"
 }
 variable "userData" {
-	description = "UserData bootstrap script that uns when the instance is launched"
+	description = "UserData bootstrap script that is used when the instance is launched"
 	default = ""
 }

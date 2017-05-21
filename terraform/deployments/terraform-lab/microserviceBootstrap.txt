@@ -1,0 +1,16 @@
+#!/bin/bash
+yum install -y docker
+yum update -y
+service docker start
+chkconfig docker on
+
+config="logging:
+  level: INFO
+  appenders:
+    - type: console"
+
+mkdir moneta-config
+echo "$config" > moneta-config/moneta-dropwizard.yaml
+
+docker pull derekashmore/moneta-dropwizard:0.9.3-alpha
+docker run -d -p 80:8080 -v $PWD/moneta-config:/config derekashmore/moneta-dropwizard:0.9.3-alpha
