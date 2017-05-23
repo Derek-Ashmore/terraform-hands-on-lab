@@ -17,3 +17,6 @@ variable "caller_security_group_id_list" {
   type = "list"
   description = "Specifies security group ids that are allowed to use this microservice"
 }
+variable "administratorSecurityGroupId" {
+  description = "Administrator Security group assigned to the web server instance when it's launched"
+}

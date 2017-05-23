@@ -28,6 +28,16 @@ resource "aws_security_group_rule" "allowHttp" {
     security_group_id = "${aws_security_group.webServerSecurityGroup.id}"
 }
 
+resource "aws_security_group_rule" "allowAdminSSH" {
+    type = "ingress"
+    from_port = 22
+    to_port = 22
+    protocol = "tcp"
+    source_security_group_id = "${var.administratorSecurityGroupId}"
+
+    security_group_id = "${aws_security_group.webServerSecurityGroup.id}"
+}
+
 resource "aws_security_group_rule" "allowAllEgress" {
     type = "egress"
     from_port = 0
