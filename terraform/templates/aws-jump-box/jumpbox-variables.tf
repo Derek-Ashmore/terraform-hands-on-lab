@@ -17,6 +17,9 @@
 variable "instance_name" {
 	default = "TerraformLab Webserver"
 }
+variable "subnet_name" {
+	default = "TerraformLab.public0"
+}
 variable "key_pair" {
 	description = "Key pair to use when launching instance"
   default = ""

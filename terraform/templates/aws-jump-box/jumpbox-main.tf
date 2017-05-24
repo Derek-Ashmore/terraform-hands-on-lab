@@ -18,7 +18,7 @@ resource "aws_instance" "jumpbox" {
  vpc_security_group_ids = ["${var.administratorSecurityGroupId}"]
 
  tags {
-   "Name" = "${var.instance_name} - ${data.aws_subnet.targetSubnet.tags.Name}"
+   "Name" = "${var.instance_name} - ${var.subnet_name}"
  }
 
 }

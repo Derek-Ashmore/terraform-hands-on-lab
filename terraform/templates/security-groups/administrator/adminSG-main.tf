@@ -9,7 +9,7 @@ provider "aws" {
 }
 
 resource "aws_security_group" "administratorSecurityGroup" {
-  name = "${data.aws_vpc.targetVpc.tags.Name} - Administrator Standard"
+  name = "${var.vpc_name} - Administrator Standard"
   description = "Allow tcp port 22 from anywhere - anything out"
   vpc_id = "${var.vpc_id}"
 

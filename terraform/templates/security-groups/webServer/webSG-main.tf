@@ -9,7 +9,7 @@ provider "aws" {
 }
 
 resource "aws_security_group" "webServerSecurityGroup" {
-  name = "${data.aws_vpc.targetVpc.tags.Name} - Web Server Standard"
+  name = "${var.vpc_name} - Web Server Standard"
   description = "Allow tcp port 80 in - anything out"
   vpc_id = "${var.vpc_id}"
 

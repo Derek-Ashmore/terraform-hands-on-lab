@@ -28,6 +28,7 @@ module "admin-security-group" {
   aws_region = "${var.aws_region}"
 
 	vpc_id = "${module.aws-vpc.VpcId}"
+	vpc_name = "TerraformLabVPC"
 }
 
 module "webServer-security-group" {
@@ -37,6 +38,7 @@ module "webServer-security-group" {
   aws_region = "${var.aws_region}"
 
 	vpc_id = "${module.aws-vpc.VpcId}"
+	vpc_name = "TerraformLabVPC"
 	administratorSecurityGroupId = "${module.admin-security-group.administratorSecurityGroupId}"
 }
 
@@ -68,6 +70,7 @@ module "microservice-security-group" {
   aws_region = "${var.aws_region}"
 
 	vpc_id = "${module.aws-vpc.VpcId}"
+	vpc_name = "TerraformLabVPC"
 	caller_security_group_id_list = ["${module.webServer-security-group.webServerSecurityGroupId}"
 		, "${module.admin-security-group.administratorSecurityGroupId}"]
 	administratorSecurityGroupId = "${module.admin-security-group.administratorSecurityGroupId}"

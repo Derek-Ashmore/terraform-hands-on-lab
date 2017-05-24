@@ -17,6 +17,9 @@ variable "subnet_id" {
 variable "instance_name" {
 	default = "TerraformLab Microservice"
 }
+variable "subnet_name" {
+	default = "TerraformLab.private0"
+}
 variable "privateIp" {
 	description = "Private IP assigned to the microservice"
 }

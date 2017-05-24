@@ -9,7 +9,7 @@ provider "aws" {
 }
 
 resource "aws_security_group" "microserviceSecurityGroup" {
-  name = "${data.aws_vpc.targetVpc.tags.Name} - Microservice Standard"
+  name = "${var.vpc_name} - Microservice Standard"
   description = "Allow tcp port 80 from web servers in - anything out"
   vpc_id = "${var.vpc_id}"
 

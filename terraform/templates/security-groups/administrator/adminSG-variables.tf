@@ -9,3 +9,7 @@ variable "aws_region" {
 variable "vpc_id" {
   description = "AWS ID of the VPC"
 }
+
+variable "vpc_name" {
+  description = "Name tag of the VPC"
+}

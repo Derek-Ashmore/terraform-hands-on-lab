@@ -1,10 +1,5 @@
 # Contains provider data sources/lookups needed for this module
 
-# Lookup the VPC that the web server will be placed in.
-data "aws_vpc" "targetVpc" {
-   id = "${var.vpc_id}"
-}
-
 data "aws_subnet" "targetSubnet" {
   id = "${var.subnet_id}"
 }

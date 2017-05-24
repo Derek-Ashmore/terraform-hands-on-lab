@@ -9,6 +9,9 @@ variable "aws_region" {
 variable "vpc_id" {
   description = "AWS ID of the VPC"
 }
+variable "vpc_name" {
+  description = "Name tag of the VPC"
+}
 variable "publishedCallerPort" {
   description = "Published port over which service calls from callers can be made."
   default = "80"
@@ -16,6 +19,7 @@ variable "publishedCallerPort" {
 variable "caller_security_group_id_list" {
   type = "list"
   description = "Specifies security group ids that are allowed to use this microservice"
+  default = []
 }
 variable "administratorSecurityGroupId" {
   description = "Administrator Security group assigned to the web server instance when it's launched"

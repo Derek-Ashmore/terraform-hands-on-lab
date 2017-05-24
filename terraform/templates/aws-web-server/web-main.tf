@@ -18,7 +18,7 @@ resource "aws_instance" "webServer" {
  vpc_security_group_ids = ["${var.webServerSecurityGroupId}"]
 
  tags {
-   "Name" = "${var.instance_name} - ${data.aws_subnet.targetSubnet.tags.Name}"
+   "Name" = "${var.instance_name} - ${var.subnet_name}"
  }
 
 }
