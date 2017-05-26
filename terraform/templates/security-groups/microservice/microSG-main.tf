@@ -19,7 +19,7 @@ resource "aws_security_group" "microserviceSecurityGroup" {
 }
 
 resource "aws_security_group_rule" "allowHttp" {
-  count = "${length(var.caller_security_group_id_list)}"
+  count = "${var.nbr_caller_security_groups}"
   type = "ingress"
   from_port = "${var.publishedCallerPort}"
   to_port = "${var.publishedCallerPort}"

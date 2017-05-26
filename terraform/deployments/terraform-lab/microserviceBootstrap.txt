@@ -1,4 +1,5 @@
 #!/bin/bash
+sleep 30s
 yum install -y docker
 yum update -y
 service docker start

@@ -30,7 +30,10 @@ variable "assignPublicIp" {
 }
 variable "userData" {
 	description = "UserData bootstrap script that is used when the instance is launched"
-	default = ""
+	default = <<EOF
+  #!/bin/bash
+  yum update -y
+  EOF
 }
 variable "administratorSecurityGroupId" {
   description = "Security group assigned to the jump box instance when it's launched"

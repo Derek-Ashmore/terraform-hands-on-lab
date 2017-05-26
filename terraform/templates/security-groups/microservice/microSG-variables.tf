@@ -19,7 +19,9 @@ variable "publishedCallerPort" {
 variable "caller_security_group_id_list" {
   type = "list"
   description = "Specifies security group ids that are allowed to use this microservice"
-  default = []
+}
+variable "nbr_caller_security_groups" {
+  description = "Length of the caller_security_group_id_list (because you currently can't use the 'length' interpolation to assign a 'count' value)"
 }
 variable "administratorSecurityGroupId" {
   description = "Administrator Security group assigned to the web server instance when it's launched"
