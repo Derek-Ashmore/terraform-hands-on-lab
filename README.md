@@ -37,6 +37,12 @@ cost something -- typically less than one dollar.  A credit card may be required
 ### Step 3: Download this Project
 > This project is on my [Github](https://github.com/Derek-Ashmore/terraform-hands-on-lab)
 
-> Clone or download/unzip this project
+> Clone or download/unzip this project.
+If you already have Git installed, the command to clone is below.  If you don't,
+I would use the "Clone or download" control to download a zip file and expand it.
+You really do not need Git for this lab.
+```
+git clone https://github.com/Derek-Ashmore/terraform-hands-on-lab.git
+```
 
 ![Lab Download Screenshot](lab-download-screenshot.png?raw=true)
