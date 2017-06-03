@@ -114,4 +114,5 @@ module "aws-jumpbox" {
 
 output "JumpBox PublicIP" {
     value = "${module.aws-jumpbox.PublicIP} -- Remember that AWS may take a couple of minutes for new public IPs to work!"
-}*/
+}
+*/
