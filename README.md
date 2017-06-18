@@ -32,7 +32,7 @@ Terraform v0.9.5
 ### Step 2: Sign-up for an AWS Account
 Every effort is made in this lab to use free-tier resources. That said, this lab will
 cost something -- typically less than one dollar.  A credit card may be required.
-> [AWS Web Services Console](https://aws.amazon.com/)
+> [AWS Web Services Console](https://aws.amazon.com/resources/create-account/)
 
 ### Step 3: Download this Project
 > This project is on my [Github](https://github.com/Derek-Ashmore/terraform-hands-on-lab)
