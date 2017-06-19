@@ -15,7 +15,8 @@ Written instructions are below.
 #### Complete Setup Before the Lab Begins (about 10 minutes)!
 In the guided lab discussion, I will assume you've completed all setup steps and
 we'll move on to the [Lab Exercises](documentation/lab-exercises.md). It is
-simply not fair to people who took the time for setup beforehand.
+simply not fair to people who took the time for setup beforehand. Those that don't do the
+setup can treat the lab as a "demo".
 
 ---
 ## Setting up for the Hands-On Lab
@@ -41,6 +42,11 @@ Terraform v0.9.8
 Every effort is made in this lab to use free-tier resources. That said, this lab will
 cost something -- typically less than one dollar.  A credit card may be required.
 > [AWS Web Services Console](https://aws.amazon.com/resources/create-account/)
+
+**Use of an employers AWS account is not recommended!** This lab will create an entirely
+new VPC and subnets within it. These are privileges that might not be granted to you. The cost
+of this lab if you follow instructions is well under $1. Keep in mind, you can treat the
+lab as a "demo" as I'll be executing it up front. 
 
 ### Step 3: Download this Project
 > This project is on my [Github](https://github.com/Derek-Ashmore/terraform-hands-on-lab)
