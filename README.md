@@ -7,9 +7,17 @@ the following:
 * Docker
 * Text editor of your choice
 
-In the guided lab discussion, I will assume you've completed all setup steps and
-we'll move on to the [Lab Exercises](documentation/lab-exercises.md).
+#### Youtube Instructions
+I've put together a short Youtube video to guide you through the setup instructions
+for the lab; Some prefer video to text.  Link is [here](https://youtu.be/K8qkMjvrHrg).
+Written instructions are below.
 
+#### Complete Setup Before the Lab Begins (about 10 minutes)!
+In the guided lab discussion, I will assume you've completed all setup steps and
+we'll move on to the [Lab Exercises](documentation/lab-exercises.md). It is
+simply not fair to people who took the time for setup beforehand.
+
+---
 ## Setting up for the Hands-On Lab
 
 ### Step 1: Download and Install Terraform
@@ -26,7 +34,7 @@ that can run Terraform will work for this lab.
 You should see something like this:
 ```
 C:\>terraform -v
-Terraform v0.9.5
+Terraform v0.9.8
 ```
 
 ### Step 2: Sign-up for an AWS Account
